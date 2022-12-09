@@ -21,7 +21,9 @@ app.use(express.static('public'));       //to define public path for css and jav
 
 app.use('/js',express.static(__dirname+'./../public/js'));   //to add external js files
 
-
+app.get("/",(req,res) => {
+    res.render("index")
+    });
     app.get("/index",(req,res) => {
         res.render("index")
         });
